@@ -355,7 +355,7 @@ a {
 }
 .page_2 .container {
   width: 100%;
-  margin-top: 130px;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,7 +383,7 @@ a {
   position: relative;
 }
 .page_2 .container .job_ex_cont .top {
-  height: 150px;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,16 +392,16 @@ a {
           justify-content: flex-start;
   width: 600px;
   position: relative;
-  padding-top: 30px;
+  padding-top: 0px;
   right: 80px;
 }
 .page_2 .container .job_ex_cont .top .com > span {
   position: absolute;
-  top: 55px;
+  top: 25px;
   left: 370px;
 }
 .page_2 .container .job_ex_cont .mid {
-  height: 120px;
+  height: 105px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,7 +426,7 @@ a {
   right: 490px;
 }
 .page_2 .container .job_ex_cont .bottom {
-  height: 150px;
+  height: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,7 +452,7 @@ a {
 }
 .page_2 .container .mid_bar {
   width: 3px;
-  height: 500px;
+  height: 580px;
   background: rgba(93, 240, 208, 0.5254901961);
   position: absolute;
   left: 50%;
