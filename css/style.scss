@@ -547,16 +547,19 @@ a {
   display: flex;
   justify-content: space-between;
   position: relative;
-  .swiper-pagination {
-    position: absolute;
-    bottom: 276px !important;
-  }
-  .swiper-pagination-bullet {
-    background-color: #2c614f;
-    margin: 0 10px !important;
-  }
+}
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  bottom: 0;
+  top: unset;
+  border-radius: 10px;
+  height: 5px;
+  overflow: hidden;
 }
 
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #2c614f;
+}
 .swiper-slide {
   padding: 10px;
   border-radius: 8px;

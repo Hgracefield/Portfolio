@@ -45,17 +45,16 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
 
-  loop: true,
+  // loop: true,
   loopAdditionalSlides: 1,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
-    clickable: false,
+    type: "progressbar",
   },
-
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   breakpoints: {
@@ -123,28 +122,6 @@ spans[3].onclick = function () {
 spans[4].onclick = function () {
   window.scroll({ top: fifthTop, behavior: "smooth" });
 };
-
-// IntersectionObserver
-// let options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: [0.5, 0.75, 1]
-// }
-// let observer = new IntersectionObserver((e) => {
-//     e.forEach((bx) => {
-//         console.log(bx)
-//         console.log(bx.intersectionRatio)
-//         if (bx.isIntersecting) {
-//             bx.target.style.opacity = 1;
-//         } else {
-//             bx.target.style.opacity = 0;
-//         }
-//     })
-// }, options);
-
-// const target = document.querySelector('.job_ex_container_pad');
-
-// observer.observe(target)
 
 function sendEmail() {
   window.location.href = "mailto:gracefield0814@gmail.com";
