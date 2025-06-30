@@ -35,15 +35,113 @@ a {
   color: #5e5e5e;
 }
 
-#wrap {
+.wrap {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: auto;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  .header-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    border: 1px solid #ddd;
+    .header-inner {
+      padding: 15px 20px;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+  .ham-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background: #90d1ca;
+  }
+  .main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .main-left {
+      width: 50%;
+      padding: 100px 70px;
+
+      .item-grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .i-grid {
+          width: 150px;
+          height: 100px;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .i-grid-num {
+            font-size: 14px;
+          }
+          img {
+            width: 80px;
+            height: auto;
+          }
+        }
+      }
+    }
+    .main-right {
+      width: 50%;
+      background: #fffbde;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inner {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        border: 1px solid orange;
+
+        .show-img {
+          width: 60%;
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+          .img-container {
+            display: block;
+            width: 100%;
+            height: auto;
+            img {
+              border-radius: 100% 0 100% 0;
+              animation: curveImg 0.3s;
+              width: 500px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-
+@keyframes curveImg {
+  0% {
+    border-radius: 0;
+  }
+  100% {
+    border-radius: 100px 0 100px 0;
+  }
+}
