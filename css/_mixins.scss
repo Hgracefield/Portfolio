@@ -12,14 +12,20 @@
   }
 }
 
+@mixin desktop-small {
+  @media (min-width: #{$breakpoint-desktop}) and (max-width: 1399px) {
+    @content;
+  }
+}
+
 @mixin desktop-medium {
-  @media (min-width: #{$breakpoint-desktop}) and (max-width: 2000px) {
+  @media (min-width: 1400px) and (max-width: 1800px) {
     @content;
   }
 }
 
 @mixin desktop-large {
-  @media (min-width: 1600px) {
+  @media (min-width: 2000px) {
     @content;
   }
 }

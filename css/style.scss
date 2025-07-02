@@ -261,8 +261,12 @@ color {
         box-sizing: border-box;
         grid-template-columns: repeat(5, 1fr);
         @include desktop-medium {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px 10px;
+        }
+        @include desktop-small {
           grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
+          gap: 30px 10px;
         }
         @include tablet {
           grid-template-columns: repeat(2, 1fr);
