@@ -66,6 +66,7 @@ color {
 }
 
 .wrap {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   display: flex;
@@ -205,7 +206,7 @@ color {
         bottom: 0;
         padding: 20px;
         width: 400px;
-        height: 400px;
+        height: 300px;
         ul {
           li {
             &:nth-child(1) {
@@ -250,6 +251,12 @@ color {
       width: 50%;
       padding: 100px 30px 0 30px;
       overflow-y: scroll;
+      &::-webkit-scrollbar {
+        background: #fff;
+      }
+      @include tablet {
+        padding: 100px 30px 50px 30px;
+      }
       @include mobile {
         width: 100%;
         padding: 100px 10px 0 10px;
@@ -270,6 +277,7 @@ color {
         }
         @include tablet {
           grid-template-columns: repeat(2, 1fr);
+          gap: 80px 30px;
         }
         @include mobile {
           grid-template-columns: repeat(3, 1fr);
@@ -308,6 +316,7 @@ color {
             overflow: hidden;
             position: relative;
             cursor: pointer;
+            filter: grayscale(94%) brightness(0.9);
             @include mobile {
               width: 100%;
               height: 100%;
@@ -380,34 +389,32 @@ color {
         justify-content: center;
         .show-img {
           width: 100%;
-          height: auto;
           display: flex;
-          flex-wrap: wrap;
-          gap: 30px;
           justify-content: center;
-          align-content: center;
+          flex-wrap: wrap;
+          position: relative;
+          overflow: hidden;
+          height: auto;
+          gap: 30px;
           .img-container {
-            display: block;
-            height: auto;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            align-content: center;
-            img {
-              height: auto;
-              transition: opacity 0.3s ease;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            &.active {
               opacity: 1;
-              animation: curveImg 1.2s forwards;
-            }
-            img.fade-out {
-              opacity: 0.2;
+
+              img {
+                animation: curveImg 1s ease forwards;
+              }
             }
           }
+
           .img-desc {
             font-size: 34px;
             font-weight: 500;
-            position: absolute;
-            bottom: 150px;
+
             .year-wrap {
               display: flex;
               flex-wrap: nowrap;
@@ -433,7 +440,7 @@ color {
 
 @keyframes curveImg {
   from {
-    width: 100%;
+    width: 80%;
     border-radius: 100% 0 100% 0;
     opacity: 0;
   }
