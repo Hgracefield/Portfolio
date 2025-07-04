@@ -198,11 +198,9 @@ color {
         .page-desc {
           display: none;
           @include mobile {
-            width: 90%;
-            // backdrop-filter: blur(2px);
-
-            backdrop-filter: sepia(50%);
-
+            width: 100%;
+            backdrop-filter: blur(2px);
+            // backdrop-filter: sepia(50%);
             display: block;
             position: absolute;
             top: 50%;
@@ -213,7 +211,7 @@ color {
           ul {
             li {
               &:nth-child(1) {
-                color: #fff;
+                color: #5a827e;
                 font-size: 12px;
                 margin-bottom: 3px;
               }
