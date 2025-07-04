@@ -99,20 +99,24 @@ color {
   left: 0;
   height: 120px;
   z-index: 9;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  color: #000;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   background-color: transparent;
 }
 .wrap .header-container.scrolled {
+  background: gold;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 72px;
 }
 @media (min-width: 320px) and (max-width: 766px) {
   .wrap .header-container {
     height: 80px;
+    position: fixed;
   }
 }
 .wrap .header-container .header-inner {
@@ -559,7 +563,6 @@ color {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  overflow: hidden;
   height: auto;
   gap: 30px;
 }
@@ -567,6 +570,8 @@ color {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -576,6 +581,7 @@ color {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
+  position: relative;
 }
 .wrap .main .main-right .inner .show-img .img-container.active {
   opacity: 1;
@@ -584,11 +590,13 @@ color {
   -webkit-animation: curveImg 1s ease forwards;
           animation: curveImg 1s ease forwards;
 }
-.wrap .main .main-right .inner .show-img .img-desc {
+.wrap .main .main-right .inner .show-img .img-container .img-desc {
   font-size: 34px;
   font-weight: 500;
+  position: absolute;
+  bottom: -100px;
 }
-.wrap .main .main-right .inner .show-img .img-desc .year-wrap {
+.wrap .main .main-right .inner .show-img .img-container .img-desc .year-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,11 +606,11 @@ color {
       -ms-flex-align: center;
           align-items: center;
 }
-.wrap .main .main-right .inner .show-img .img-desc .year-wrap span {
+.wrap .main .main-right .inner .show-img .img-container .img-desc .year-wrap span {
   display: block;
   color: #444;
 }
-.wrap .main .main-right .inner .show-img .img-desc .year-wrap .row-line {
+.wrap .main .main-right .inner .show-img .img-container .img-desc .year-wrap .row-line {
   width: 200px;
   height: 3px;
   background: #444;

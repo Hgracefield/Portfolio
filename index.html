@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-
     <link href="https://fonts.cdnfonts.com/css/amarillo" rel="stylesheet" />
 
     <!-- 스와이퍼 -->
@@ -26,6 +25,7 @@
           <div class="desc mo-only">클릭시 본 페이지로 이동합니다.</div>
         </div>
       </header>
+
       <button class="h-menu-btn">
         <span class="h-menu-btn__line"></span>
         <span class="h-menu-btn__line"></span>
@@ -72,14 +72,14 @@
       <main class="main">
         <div class="main-left grid-mode">
           <div class="item-grid-container">
-            <a href="https://www.woojini.com/" class="i-grid" target="_blank">
+            <a href="https://www.woojini.com/" class="i-grid" target="_blank" data-theme="dark">
               <span class="i-grid-num">1</span>
               <div class="i-grid-img">
                 <img src="/image/wj.jpg" data-full="/image/wj.jpg" alt="" />
                 <!-- <img src="/image/thumb.jpg" data-full="/image/full.jpg" /> -->
               </div>
             </a>
-            <a href="https://www.itgraphy.com/" class="i-grid" target="_blank">
+            <a href="https://www.itgraphy.com/" class="i-grid" target="_blank" data-theme="light">
               <span class="i-grid-num">2</span>
               <div class="i-grid-img">
                 <img src="/image/graphy.jpg" alt="" />
@@ -188,9 +188,9 @@
             <div class="show-img">
               <div class="img-container">
                 <img src="/image/design.jpg" alt="" />
-              </div>
-              <div class="img-desc">
-                <p class="year-wrap"><span class="year">2022</span> <span class="row-line"></span> <span class="year">2025</span></p>
+                <div class="img-desc">
+                  <p class="year-wrap"><span class="year">2022</span> <span class="row-line"></span> <span class="year">2025</span></p>
+                </div>
               </div>
             </div>
           </div>
@@ -198,207 +198,6 @@
       </main>
     </div>
 
-    <!-- <div id="wrap">
-      <div class="page page_1">
-        <div class="header">
-          <div class="header_left">H2J</div>
-          <div class="header_right">
-            <ul>
-              <li class="on">HOME</li>
-              <li>Job Experience</li>
-              <li>Resume</li>
-              <li>portfolio</li>
-              <li>About</li>
-            </ul>
-          </div>
-        </div>
-        <div class="flow_text">
-          <div class="text_box" data-trigger="data-trigger">
-            <div class="page_1_bar"></div>
-            <span class="text" style="color: mediumpurple"></span>
-          </div>
-        </div>
-      </div>
-      <div class="page page_2" id="page_2">
-        <div class="page_tit">
-          <p>JOB EXPERIENCE</p>
-          <a href="/file2025v1.docx" class="down_profile">이력서 다운로드</a>
-        </div>
-        <div class="container">
-          <div class="mid_bar"></div>
-          <div class="job_ex_cont">
-            <div class="job_ex_container_pad top">
-              <div class="com">
-                <p class="com_name">INFOIN <span class="green">Web publisher</span></p>
-                <p class="gray">2024.09~2025.04</p>
-                <span><img src="img/position_dot_1.png" alt="" /></span>
-              </div>
-            </div>
-            <div class="job_ex_container_pad mid">
-              <div class="com">
-                <p class="com_name">모노브레인 <span class="green">Web publisher</span></p>
-                <p class="gray">2024.04~2024.08</p>
-                <span><img src="img/position_dot_1.png" alt="" /></span>
-              </div>
-            </div>
-            <div class="job_ex_container_pad bottom">
-              <div class="com">
-                <p class="com_name">프리랜서 <span class="green">Web publisher</span></p>
-                <p class="gray">2023.08~</p>
-                <span><img src="img/position_dot_1.png" alt="" /></span>
-              </div>
-            </div>
-            <div class="job_ex_container_pad mid _bot">
-              <div class="com">
-                <p class="com_name">MEDIA BOLD <span class="green">Web publisher</span></p>
-                <p class="gray">2022.09~2023.05</p>
-                <span><img src="img/position_dot_1.png" alt="" /></span>
-              </div>
-            </div>
-            <div class="job_ex_container_pad top">
-              <div class="com">
-                <p class="com_name">BIBLIC <span class="green">Web publisher</span></p>
-                <p class="gray">2021.07~2022.07</p>
-                <span><img src="img/position_dot_1.png" alt="" /></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-     
-      <div class="page page_4" id="page_4">
-        <div class="portfolio">
-          <div class="page_tit">
-            <p>PORTFOLIO</p>
-          </div>
-          <div class="pft_tab">
-            <ul>
-              <!-- <li>Responsive</li> -->
-    <!-- </ul>
-          </div>
-          <div class="pft_img_tab">
-            <!-- Slider main container -->
-    <!-- <div class="swiper mySwiper"> -->
-    <!-- Additional required wrapper -->
-    <!-- <div class="swiper-wrapper"> -->
-    <!-- Slides -->
-    <!-- <div class="swiper-slide">
-                  <a href="https://www.woojini.com/" target="_blank"><img src="img/WJ.jpg" alt="" /> <span>WOOJIN I&C</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://www.itgraphy.com/" target="_blank"><img src="img/graphy.png" alt="" /> <span>Graphy</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://higrnd.cafe24.com/" target="_blank"><img src="img/hig.jpg" alt="" /> <span>HIG R&D Center</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://www.mkbowling.com/" target="_blank"><img src="img/bowling.jpg" alt="" /> <span>MK 트레이딩</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://jasungdnc.com/index.php" target="_blank"><img src="img/jasung.jpg" target="_blank" alt="" /> <span>자성 D&C</span></a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="https://www.bonjungschool.kr/index.php" target="_blank"><img src="img/bonjung.jpg" alt="" /> <span>본정스쿨</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://www.diasense.co.kr/" target="_blank"><img src="img/diasend.png" alt="" /> <span>디아센스</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://www.vitalsolution.kr/" target="_blank"><img src="img/vital.jpg" alt="" /> <span>(주)VITALS</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://www.healingsam.com/" target="_blank"><img src="img/cheonsa.jpg" alt="" /> <span>힐링샘</span></a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="https://www.ksramp.or.kr/" target="_blank"><img src="img/bangsasung.jpg" alt="" /> <span>대한방사성의약품학회</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://www.nanomedicine.or.kr/" target="_blank"><img src="img/nano.jpg" alt="" /> <span>대한나노의학회</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://publicdesign.or.kr/" target="_blank"><img src="img/design_search.jpg" alt="" /> <span>한국 디자인리서치학회</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" target="_blank"><img src="img/public_design.jpg" alt="" /> <span>한국 공공디자인학회</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://kcitydesign.or.kr/" target="_blank"><img src="img/design.jpg" alt="" /> <span>한국 도시디자인학회</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://www.awmck.org/bbs/info3.php" target="_blank"><img src="img/women.jpg" alt="" /> <span>대한성공회 여성선교센터</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://hengsa.kr/" target="_blank"><img src="img/hengsa.jpg" alt="" /> <span>행사왕</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="http://www.chartkorea.net/" target="_blank"><img src="img/chart.jpg" alt="" /> <span>차트코리아</span></a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://mmbs.snu.ac.kr/" target="_blank"><img src="img/mmbs.jpg" alt="" /> <span>MMBS</span></a>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div> -->
-    <!-- <div class="swiper-scrollbar"></div> -->
-    <!-- </div>
-          </div>
-        </div>
-      </div>
-      <div class="page page_5" id="page_5">
-        <div class="page_5_top">
-          <div class="page_5_left">
-            <div class="me_pic">
-              <img src="img/pic_me.jpg" alt="" />
-            </div>
-          </div>
-          <div class="page_5_right">
-            <h5>IT`s ME</h5>
-            <div class="intro">
-              <p>소통을 통한 원활한 일을 하는 퍼블리셔</p>
-              <span>다양한 프로젝트를 거치며 발전하는 웹 퍼블리셔 황혜전입니다.</span>
-            </div>
-            <div class="call">
-              <span> <i class="fa-regular fa-envelope" alt="메일이미지"></i>gracefield0814@gmail.com</span>
-              <span>
-                <i class="fa-solid fa-mobile-screen-button" alt="전화이미지"></i>
-                010-5320-1599</span>
-            </div>
-          </div>
-        </div>
-        <div class="page_5_bottom">
-          <h5>CONTACT ME</h5>
-          <div class="info_container">
-            <div class="intro_box">
-              <i class="fa-solid fa-location-dot"></i>
-              <p>Address</p>
-              <span>서울특별시 송파구 석촌동 221-1</span>
-            </div>
-            <div class="intro_box">
-              <i class="fa-solid fa-mobile-screen-button" alt="전화이미지"></i>
-              <p>Phone</p>
-              <span> 010-5320-1599</span>
-            </div>
-            <div class="intro_box">
-              <i class="fa-regular fa-envelope" alt="메일이미지"></i>
-              <p>Mail</p>
-              <span class="my_mail">&nbsp; gracefield0814@gmail.com</span>
-            </div>
-          </div>
-          <div class="mail_to_me">
-            <button onclick="sendEmail()">SEND e-mail TO ME</button>
-          </div>
-          <div class="my_sms">
-            <div class="sms_top">
-              <a href="https://www.instagram.com/h_grace_field/">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <span>Copyright ⓒ<span id="year"></span> All rights reserved</span>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div> -->
     <script type="text/javascript" src="js/port.js"></script>
   </body>
 </html>

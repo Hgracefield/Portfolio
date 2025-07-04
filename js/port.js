@@ -16,9 +16,8 @@ gridItems.forEach((item) => {
     const newSrc = img.getAttribute("data-full") || img.getAttribute("src");
     const newAlt = img.getAttribute("alt") || "";
 
-    // animation 재시작을 위해 class 재적용
     imgContainer.classList.remove("active");
-    void imgContainer.offsetWidth; // 리플로우
+    void imgContainer.offsetWidth;
 
     showImg.setAttribute("src", newSrc);
     showImg.setAttribute("alt", newAlt);
@@ -29,9 +28,10 @@ gridItems.forEach((item) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header-container");
+  const mainLeft = document.querySelector(".main-left");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
+  mainLeft.addEventListener("scroll", () => {
+    if (mainLeft.scrollTop > 0) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");

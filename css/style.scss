@@ -76,6 +76,7 @@ color {
   position: relative;
   width: 100vw;
   height: 100vh;
+
   .header-container {
     width: 100%;
     position: absolute;
@@ -83,15 +84,20 @@ color {
     left: 0;
     height: 120px;
     z-index: 9;
-    transition: all 0.3s ease;
+    color: #000;
+    transition: color 0.3s ease;
     background-color: transparent;
+
     &.scrolled {
+      background: gold;
       backdrop-filter: blur(8px);
-      background-color: rgba(255, 255, 255, 0.8); // 흐릿한 흰색 배경
+      background-color: rgba(255, 255, 255, 0.8);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      height: 72px;
     }
     @include mobile {
       height: 80px;
+      position: fixed;
     }
     .header-inner {
       padding: 25px 0px;
@@ -456,15 +462,17 @@ color {
           justify-content: center;
           flex-wrap: wrap;
           position: relative;
-          overflow: hidden;
+          // overflow: hidden;
           height: auto;
           gap: 30px;
           .img-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             opacity: 0;
             transition: opacity 0.5s ease;
+            position: relative;
             &.active {
               opacity: 1;
 
@@ -472,26 +480,26 @@ color {
                 animation: curveImg 1s ease forwards;
               }
             }
-          }
-
-          .img-desc {
-            font-size: 34px;
-            font-weight: 500;
-
-            .year-wrap {
-              display: flex;
-              flex-wrap: nowrap;
-              align-items: center;
-              span {
-                display: block;
-                color: #444;
-              }
-              .row-line {
-                width: 200px;
-                height: 3px;
-                background: #444;
+            .img-desc {
+              font-size: 34px;
+              font-weight: 500;
+              position: absolute;
+              bottom: -100px;
+              .year-wrap {
                 display: flex;
-                margin: 0 20px;
+                flex-wrap: nowrap;
+                align-items: center;
+                span {
+                  display: block;
+                  color: #444;
+                }
+                .row-line {
+                  width: 200px;
+                  height: 3px;
+                  background: #444;
+                  display: flex;
+                  margin: 0 20px;
+                }
               }
             }
           }
