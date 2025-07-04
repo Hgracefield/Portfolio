@@ -89,7 +89,6 @@ color {
     background-color: transparent;
 
     &.scrolled {
-      background: gold;
       backdrop-filter: blur(8px);
       background-color: rgba(255, 255, 255, 0.8);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -115,6 +114,9 @@ color {
         align-items: center;
         line-height: 1.1;
         padding-left: 30px;
+        @include mobile {
+          padding-left: 10px;
+        }
       }
       .desc {
         font-size: 14px;
@@ -122,6 +124,9 @@ color {
         padding-left: 30px;
         @include tablet {
           padding-left: 30px;
+        }
+        @include mobile {
+          padding-left: 10px;
         }
       }
     }
@@ -136,6 +141,9 @@ color {
     border: none;
     background: none;
     cursor: pointer;
+    @include mobile {
+      right: 10px;
+    }
     .h-menu-btn__line {
       position: absolute;
       display: block;
@@ -332,13 +340,13 @@ color {
       }
 
       .item-grid-container {
-        gap: 150px 30px;
+        gap: 100px 30px;
         display: grid;
         box-sizing: border-box;
         grid-template-columns: repeat(5, 1fr);
         @include desktop-medium {
           grid-template-columns: repeat(4, 1fr);
-          gap: 30px 10px;
+          gap: 50px 10px;
         }
         @include desktop-small {
           grid-template-columns: repeat(3, 1fr);
@@ -353,42 +361,51 @@ color {
           gap: 10px;
         }
         .i-grid {
-          width: 150px;
+          width: 100%;
           min-height: 100px;
           display: flex;
           flex-wrap: nowrap;
           justify-content: space-between;
           align-items: flex-start;
+          gap: 5px;
+
           @include desktop-medium {
-            width: 130px;
+            width: 90%;
             min-height: 100px;
+          }
+          @include tablet {
+            gap: 20px 15px;
           }
           @include mobile {
             width: 100%;
             height: auto;
             min-height: 90px;
             margin-bottom: 20px;
+            gap: 3px;
           }
           .i-grid-num {
             font-size: 12px;
             color: #222;
-            margin-right: 5px;
             width: 14px;
             @include mobile {
               font-size: 9px;
+              width: 10px;
             }
           }
           .i-grid-img {
-            width: 130px;
-            min-height: 100px;
+            width: 100%;
+            min-height: 120px;
             height: 80px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
             filter: grayscale(94%) brightness(0.9);
+            @include tablet {
+              // min-height: 100px;
+            }
             @include mobile {
               width: 100%;
-              height: 100%;
+              min-height: 90px;
             }
 
             &::after {
