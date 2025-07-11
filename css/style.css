@@ -73,6 +73,12 @@ color {
   }
 }
 
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
 .wrap {
   scroll-behavior: smooth;
   margin: 0;
@@ -384,7 +390,7 @@ color {
 .wrap .main .main-left {
   width: 50%;
   padding: 100px 30px 0 30px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .wrap .main .main-left::-webkit-scrollbar {
   background: #fff;
