@@ -298,7 +298,7 @@ body {
   right: 0;
   bottom: 0;
   padding: 20px;
-  width: 300px;
+  width: 320px;
   height: 300px;
 }
 @media (min-width: 320px) and (max-width: 766px) {
@@ -321,6 +321,10 @@ body {
 .wrap .h-menu .h-menu-right .page-desc ul li a img {
   width: 30px;
   height: 30px;
+}
+.wrap .h-menu .h-menu-right .page-desc ul li a:hover {
+  color: #84ae92;
+  font-weight: bold;
 }
 .wrap .h-menu.active .h-menu-left,
 .wrap .h-menu.active .h-menu-right {
