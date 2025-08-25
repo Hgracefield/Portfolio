@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "variables";
 @import "mixins";
 
 * {
@@ -412,8 +413,8 @@ body {
             @include mobile {
               width: 100%;
               min-height: 90px;
+              filter: grayscale(0%) brightness(1);
             }
-
             &::after {
               content: "";
               position: absolute;
@@ -496,18 +497,18 @@ body {
             opacity: 0;
             transition: opacity 0.5s ease;
             position: relative;
+            gap: 20px;
             &.active {
               opacity: 1;
-
               img {
                 animation: curveImg 1s ease forwards;
               }
             }
             .img-desc {
-              font-size: 34px;
+              font-size: 2em;
               font-weight: 500;
-              position: absolute;
-              bottom: -100px;
+              // position: absolute;
+              // bottom: -100px;
               .year-wrap {
                 display: flex;
                 flex-wrap: nowrap;
@@ -531,7 +532,15 @@ body {
     }
   }
 }
-
+.img-desc {
+  margin-top: 12px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  text-align: center;
+  // white-space: pre-line;
+}
 @keyframes curveImg {
   from {
     width: 80%;

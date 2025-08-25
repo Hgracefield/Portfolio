@@ -9,18 +9,21 @@ menuBtn.addEventListener("click", () => {
 const gridItems = document.querySelectorAll(".i-grid");
 const showImg = document.querySelector(".show-img img");
 const imgContainer = document.querySelector(".show-img .img-container");
+const descText = document.querySelector(".show-img .desc-text");
 
 gridItems.forEach((item) => {
   item.addEventListener("mouseenter", () => {
     const img = item.querySelector("img");
     const newSrc = img.getAttribute("data-full") || img.getAttribute("src");
     const newAlt = img.getAttribute("alt") || "";
+    const newDesc = item.getAttribute("data-desc") || "";
 
     imgContainer.classList.remove("active");
     void imgContainer.offsetWidth;
 
     showImg.setAttribute("src", newSrc);
     showImg.setAttribute("alt", newAlt);
+    // descText.textContent = newDesc;
 
     imgContainer.classList.add("active");
   });
