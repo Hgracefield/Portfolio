@@ -4,5 +4,8 @@
     "gulp": "^5.0.1",
     "gulp-sass": "^6.0.1",
     "sass": "^1.90.0"
+  },
+  "scripts": {
+    "dev": "sass --watch css/style.scss css/style.css"
   }
 }

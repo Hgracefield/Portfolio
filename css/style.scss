@@ -337,7 +337,7 @@ body {
     .main-left {
       width: 50%;
       height: 100%;
-      padding: 100px 30px 0 30px;
+      padding: 100px 30px 30px;
       overflow-y: auto;
       &::-webkit-scrollbar {
         background: #fff;
@@ -501,7 +501,7 @@ body {
             opacity: 0;
             transition: opacity 0.5s ease;
             position: relative;
-            gap: 20px;
+            gap: 0px;
             &.active {
               opacity: 1;
               img {
@@ -509,7 +509,7 @@ body {
               }
             }
             .img-desc {
-              font-size: 2em;
+              font-size: 1.2em;
               font-weight: 500;
               // position: absolute;
               // bottom: -100px;
@@ -537,13 +537,15 @@ body {
   }
 }
 .img-desc {
-  margin-top: 12px;
+  width: 100%;
+  margin-top: 0;
+  max-height: 100px;
   padding: 0 10px;
-  font-size: 14px;
+  // font-size: 14px;
   line-height: 1.6;
   color: #444;
   text-align: center;
-  // white-space: pre-line;
+  white-space: pre-line;
 }
 @keyframes curveImg {
   from {

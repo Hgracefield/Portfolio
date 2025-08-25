@@ -23,7 +23,7 @@ gridItems.forEach((item) => {
 
     showImg.setAttribute("src", newSrc);
     showImg.setAttribute("alt", newAlt);
-    // descText.textContent = newDesc;
+    descText.textContent = newDesc;
 
     imgContainer.classList.add("active");
   });
